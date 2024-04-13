@@ -57,11 +57,3 @@ class DP:
             second = first
             first = max_money
         return max(first, second)
-
-    
-
-    
-
-        
-        
-        

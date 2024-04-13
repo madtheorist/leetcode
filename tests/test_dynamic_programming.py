@@ -8,7 +8,6 @@ def test_climb_stairs():
     for n in range(3, 46):
         assert DP.climbStairs(n) == (DP.climbStairs(n - 1) + DP.climbStairs(n - 2))
 
-
 @pytest.mark.parametrize(
     "cost, output",
     [
@@ -23,10 +22,13 @@ def test_climb_stairs():
 def test_min_cost_climbing_stairs(cost, output):
     assert DP.minCostClimbingStairs(cost) == output
 
-
 @pytest.mark.parametrize(
     "nums, output",
-    [([1, 2, 3, 1], 4), ([2, 7, 9, 3, 1], 12), ([1, 100, 0, 0, 100], 200)],
+    [
+        ([1, 2, 3, 1], 4), 
+        ([2, 7, 9, 3, 1], 12), 
+        ([1, 100, 0, 0, 100], 200)
+    ],
 )
 def test_rob(nums, output):
     assert DP.rob(nums) == output
