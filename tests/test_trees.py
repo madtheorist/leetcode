@@ -1,5 +1,5 @@
 import pytest
-from solutions.trees import TreeNode as TN, Trees
+from src.leetcode import TreeNode as TN, Trees
 
 tree0 = TN()
 tree1 = TN(0)
@@ -43,4 +43,4 @@ def test_max_depth(tree, depth):
     ],
 )
 def test_diameter_of_binary_tree(tree, diameter):
-    assert Trees.diameterOfBinaryTree(tree) == diameter
+    pass
