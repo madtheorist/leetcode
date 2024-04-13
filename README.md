@@ -1,6 +1,6 @@
 # Leetcode
 
-A repository for my bumbling attempts at Leetcode problems.
+A repository for my bumbling attempts at Leetcode problems in Python.
 
 Setup on a mac:
 
