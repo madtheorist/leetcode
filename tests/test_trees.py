@@ -1,5 +1,5 @@
 import pytest
-from src.leetcode import TreeNode as TN, Trees
+from src import TreeNode as TN, Trees
 
 tree0 = TN()
 tree1 = TN(0)

@@ -1,5 +1,5 @@
 import pytest
-from src.leetcode import DP
+from src import DP
 
 
 def test_climb_stairs():
