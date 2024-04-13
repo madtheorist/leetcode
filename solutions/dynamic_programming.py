@@ -44,18 +44,19 @@ class DP:
         - n - R - 
         then skip either two houses or skip one.
         """
-        # money_cache[i] is max money gained dfrom to robbing ith house and any houses before
         if len(nums) == 1:
             return nums[0]
         if len(nums) == 2:
             return max(nums)
         if len(nums) == 3:
             return max(nums[1], nums[0] + nums[2])
-        money_cache = [nums[0], nums[1], nums[0] + nums[2]]
+        third, second, first = nums[0], nums[1], nums[0] + nums[2]        
         for num in nums[3:]:
-            max_money = num + max(money_cache[-2], money_cache[-3])
-            money_cache.append(max_money)
-        return max(money_cache[-1], money_cache[-2])
+            max_money = num + max(second, third)
+            third = second
+            second = first
+            first = max_money
+        return max(first, second)
 
     
 
