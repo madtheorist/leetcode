@@ -70,3 +70,9 @@ class Trees:
             level += 1
         return level
 
+    @classmethod
+    def diameterOfBinaryTree(cls, root: Optional[TreeNode]) -> int:
+        """
+        https://leetcode.com/problems/diameter-of-binary-tree/description/
+        """
+        pass

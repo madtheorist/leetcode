@@ -13,13 +13,13 @@ pip install -r requirements.txt
 To run tests with pytest, run
 
 ```
-python -m pytest tests
+pytest
 ```
 
 in the root directory. Or use e.g.
 
 ```
-python -m pytest tests/test_dynamic_programming.py
+pytest tests/test_dynamic_programming.py -k 'test_climb_stairs'
 ```
 
-to run a specific test module.
+to test a specific problem.

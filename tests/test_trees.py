@@ -31,3 +31,16 @@ def test_invert_tree(tree, inverted_tree):
 )
 def test_max_depth(tree, depth):
     assert Trees.maxDepth(tree) == depth
+
+@pytest.mark.parametrize(
+    "tree, diameter",
+    [
+        (tree0, 0), 
+        (tree1, 0),
+        (tree2, 2),
+        (tree3, 4), 
+        (tree4, 3)
+    ],
+)
+def test_diameter_of_binary_tree(tree, diameter):
+    assert Trees.diameterOfBinaryTree(tree) == diameter
