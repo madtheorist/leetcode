@@ -16,6 +16,17 @@ class Arrays:
                 num_2_index[num] = i
             else:
                 return [i, num_2_index[diff]]
-        
-        
-
+            
+    @classmethod
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        """
+        https://leetcode.com/problems/group-anagrams/
+        Input: strs = ["eat","tea","tan","ate","nat","bat"]
+        Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+        O(m*nlogn)
+        """
+        counters = {}
+        for word in strs:
+            test = ''.join(sorted(word))
+            counters[test] = [word] + counters.get(test, [])
+        return [l for l in counters.values()]
