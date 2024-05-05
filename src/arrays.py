@@ -30,3 +30,17 @@ class Arrays:
             test = ''.join(sorted(word))
             counters[test] = [word] + counters.get(test, [])
         return [l for l in counters.values()]
+    
+    @classmethod
+    def topKFrequent(cls, nums: List[int], k: int) -> List[int]:
+        """
+        https://leetcode.com/problems/top-k-frequent-elements/
+        Input: nums = [1,1,1,2,2,3], k = 2
+        Output: [1,2]
+        """
+        hashmap = {}
+        for num in nums:
+            hashmap[num] = 1 + hashmap.get(num, 0)
+        # k most frequent elements
+        hashmap = {num: freq for num, freq in sorted(hashmap.items(), key=lambda x: x[1], reverse=True)}
+        return [num for num in hashmap][:k]
