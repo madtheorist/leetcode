@@ -11,3 +11,16 @@ from src import SlidingWindow
 )
 def test_max_profit(prices, profit):
     assert SlidingWindow.maxProfit(prices) == profit
+
+@pytest.mark.parametrize(
+    "string, length",
+    [
+        ("abcabcbb", 3),
+        ("bbbb", 1),
+        ("pwwkew", 3),
+        ("abcabcd", 4),
+        ("dvdf", 3)
+    ],
+)
+def test_length_of_longest_substring(string, length):
+    assert SlidingWindow.lengthOfLongestSubstring(string) == length
